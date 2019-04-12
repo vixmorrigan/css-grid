@@ -91,23 +91,28 @@
     }
 
     .item:nth-child(6n) {
-      background: cornflowerblue;
+      background: var(--brightaqua);
+      color: var(--black);
       grid-column: span 6;
     }
 
     .item:nth-child(8n) {
-      background: tomato;
+      background: var(--purple);
+      color: white;
       grid-column: span 2;
     }
 
     .item:nth-child(9n) {
+      background: var(--navy);
+      color: white;
       grid-row: span 2;
     }
-
     .item18 {
-      background: greenyellow !important;
-      grid-column-end: -1 !important;
+      /* use of important intentionally */
+      background: red!important; 
+      grid-column-end: -1!important;
     }
+    /* CSS Grid will always lay those with specific placement first */ 
   </style>
 </body>
 
