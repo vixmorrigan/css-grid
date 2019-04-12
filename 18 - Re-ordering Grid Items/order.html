@@ -38,6 +38,13 @@
       grid-column: 1 / -1;
       order: 3;
     }
+
+    /* specifying order will mess up certain accessibility functionality
+    - e.g. screen readers will read them out in the order they are structured - not specified
+    only use for things that don't matter, such as logo and nav position, over important elements 
+    like content, paragraph */ 
+    /* ALSO - messes up selecting abilities - highlight the properties to see working example */
+    
   </style>
 </body>
 
