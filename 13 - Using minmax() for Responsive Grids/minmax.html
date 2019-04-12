@@ -20,9 +20,10 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      border: 10px solid var(--yellow);
-      /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-      grid-template-columns: fit-content(100px) 150px 150px 150px;
+      border: 10px solid var(--purple);
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      /* grid-template-columns: fit-content(100px) 150px 150px 150px; 
+          fit-content can be used to clamp items to size where needed*/
     }
   </style>
 </body>
