@@ -54,23 +54,31 @@
 
   <style>
     /*
-      justify-items:
-      align-items:
 
-      justify-content:
-      align-content:
-
-      align-self:
-      justify-self:
-
-      justify-* is row axis
-      align-* is column axis
+      justify-* is row axis (X axis)
+      align-* is column axis (Y axis)
     */
 
     .container {
       display: grid;
       grid-gap: 20px;
       grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: repeat(5, 100px);
+      justify-items: stretch;
+      align-items: stretch;
+     /* place-items: center center; check on caniuse for compatibility, shorthand 
+     for both above properties */ 
+     justify-content: space-between;
+     align-content: space-around; /* use fixed height on grid to apply these properties */
+    }
+
+    .itm {
+      background: var(--purple);
+      color: white;
+    }
+
+    .itm5 {
+      justify-self: center;
     }
   </style>
 </body>
