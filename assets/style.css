@@ -9,6 +9,8 @@
   --yellow: #ffc600;
   --black: #272727;
   --purple: #633385;
+  --navy: #1D1042;
+  --brightaqua: #D6F8FA;
 }
 
 html {
@@ -62,7 +64,8 @@ h6 {
   border: 5px solid rgba(0, 0, 0, 0.03);
   border-radius: 3px;
   font-size: 35px;
-  background-color: var(--yellow); /* best colour */
+  color: var(--brightaqua);
+  background-color: var(--navy); /* best colour for Vix */
 }
 
 .item p {
