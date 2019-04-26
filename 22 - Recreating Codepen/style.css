@@ -1,6 +1,7 @@
 :root {
   --grey: #343436;
 }
+
 html {
   box-sizing: border-box;
   font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
@@ -39,13 +40,12 @@ h6 {
 }
 
 .codepen >* {
-  border:1px solid black;
+  border: 1px solid black;
 }
 
-
-/* Editor! */
+/* Editor */ 
 .code {
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   background: #1b2b34;
 }
@@ -61,7 +61,7 @@ h6 {
   align-items: center;
   padding: 5px;
   grid-gap: 5px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .editor__code {
@@ -83,8 +83,7 @@ h6 {
   line-height: 19px;
 }
 
-/* Pen Header */
-
+/* Pen Header */ 
 .pen {
   display: grid;
   grid-template-columns: 1fr;
@@ -92,8 +91,8 @@ h6 {
   align-items: center;
   grid-gap: 10px;
   background: black;
-  border-bottom: 5px solid var(--grey);
   color: white;
+  border-bottom: 5px solid var(--grey);
   padding: 10px;
 }
 
@@ -101,14 +100,12 @@ h6 {
   display: grid;
 }
 
-/* Buttons */
-
 .button {
   background: var(--grey);
   border: 0;
   color: white;
   padding: 10px;
-  border-radius:5px;
+  border-radius: 5px;
   font-size: 15px;
   position: relative;
 }
@@ -128,7 +125,6 @@ h6 {
   left: 3px;
   top: 3px;
 }
-
 
 .settings {
   padding: 5px;
