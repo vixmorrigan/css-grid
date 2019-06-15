@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../assets/style.css">
-  <link rel="stylesheet" href="./responsive-START.css">
+  <link rel="stylesheet" href="./responsive.css">
   <title>Responsive Website!</title>
 </head>
 
@@ -14,15 +14,15 @@
   <div class="wrapper">
     <div class="top">
       <header class="hero">
-        <h1>Terry's Taco Joint</h1>
-        <p>Pretty Good Tacos!</p>
+        <h1>Vixie's Taco Shack</h1>
+        <p>Tasty, tempting Tacos!</p>
       </header>
       <div class="cta cta1">
-        <p class="price">$1.99</p>
+        <p class="price">£1.99</p>
         <p>Tacos</p>
       </div>
       <div class="cta cta2">
-        <p class="price">$3.99</p>
+        <p class="price">£3.99</p>
         <p>Kombucha</p>
       </div>
 
@@ -56,22 +56,22 @@
       <div class="feature">
         <span class="icon">🌮</span>
         <h3>Tacos</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Tasty tantalising Taco's to try together!</p>
       </div>
       <div class="feature">
         <span class="icon">🍺</span>
         <h3>Beer</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Bring beautifully brewed Beer boldly for your buddies!</p>
       </div>
       <div class="feature">
         <span class="icon">🍷</span>
         <h3>Wine</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p>Wonderfully witty with wine whilst you dine!</p>
       </div>
       <div class="feature">
         <span class="icon">🎵</span>
         <h3>Music</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+        <p> Maestro, music, moves and moments!</p>
       </div>
     </section>
 
@@ -80,14 +80,14 @@
       <div class="about__details">
         <h2>Featured Taco</h2>
         <p>Slim Profile, easy to hold and loaded with cheese.</p>
-        <p>This is the one you have been waiting for</p>
+        <p>This is the one you have been waiting for..</p>
         <button>Learn More →</button>
       </div>
     </section>
 
 
     <section class="gallery">
-      <h2>Instant Grams</h2>
+      <h2>Snap 📷 Shots</h2>
       <img src="https://source.unsplash.com/random/201x201" alt="">
       <img src="https://source.unsplash.com/random/202x202" alt="">
       <img src="https://source.unsplash.com/random/203x203" alt="">
@@ -102,6 +102,16 @@
   </div>
 
   <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+
+    toggleNav= ({ target }) => {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+      console.log(expanded);
+    }
+
+    navButton.addEventListener('click', toggleNav);
+
   </script>
   
 </body>

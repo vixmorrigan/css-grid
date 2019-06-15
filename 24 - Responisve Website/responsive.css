@@ -3,7 +3,8 @@ body {
 }
 
 button {
-  background: #ffc600;
+  background: var(--navy);
+  color: white;
   border: 0;
   padding: 10px 20px;
 }
@@ -12,8 +13,7 @@ img {
   max-width: 100%;
 }
 
-/* .wrapper */
-
+/* wrapper */
 .wrapper {
   display: grid;
   grid-gap: 20px;
@@ -23,17 +23,19 @@ img {
   display: grid;
   grid-gap: 20px;
   grid-template-areas:
-    "hero hero cta1"
-    "hero hero cta2"
+  "hero hero cta1"
+  "hero hero cta2"
 }
 
 .hero {
   grid-area: hero;
   min-height: 400px;
+  color: white;
   background: white url(images/taco.jpg);
   background-size: cover;
   background-position: bottom right;
   padding: 50px;
+  /* Flex can help position within the grid - better than a further grid can */ 
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -41,12 +43,13 @@ img {
 }
 
 .hero > * {
-  background: var(--yellow);
+  background: var(--navy);
   padding: 5px;
 }
 
 .cta {
-  background: var(--yellow);
+  background: var(--navy);
+  color: white;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -57,7 +60,7 @@ img {
   margin: 0;
 }
 
-.cta1 {
+.cta1 { 
   grid-area: cta1;
 }
 
@@ -71,22 +74,22 @@ img {
 }
 
 /* Navigation */
-
 .menu ul {
   display: grid;
   grid-gap: 10px;
   padding: 0;
+  margin: 20px 0;
   list-style: none;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .menu a {
-  background: var(--yellow);
+  background: var(--navy);
+  color: lightgrey;
   display: block;
   text-decoration: none;
   padding: 10px;
   text-align: center;
-  color: var(--black);
   text-transform: uppercase;
   font-size: 20px;
 }
@@ -95,12 +98,10 @@ img {
   display: none;
 }
 
-/* Features! */
-
+/* Features Segment */
 .features {
   display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
 .feature {
@@ -108,27 +109,27 @@ img {
   padding: 10px;
   border: 1px solid white;
   text-align: center;
-  box-shadow: 0 0 4px  rgba(0,0,0,0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .feature .icon {
   font-size: 50px;
 }
-.feature p {
-  color: rgba(0,0,0,0.5);
-}
 
-/* About Section */
+.feature p {
+  color: rgba(0, 0, 0, 0.6);
+}
 
 .about {
   background: white;
-  padding:50px;
+  color: var(--purple);
   display: grid;
+  padding: 50px;
   grid-template-columns: 400px 1fr;
   align-items: center;
 }
 
-/* Gallery! */
+/* Gallery */
 
 .gallery {
   display: grid;
@@ -152,7 +153,7 @@ img {
   display: block;
   content: '';
   height: 10px;
-  background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
+  background: linear-gradient(to var(--direction, left), var(--navy), transparent);
 }
 
 .gallery h2:after {
@@ -164,9 +165,10 @@ img {
     order: -1;
     perspective: 800px;
   }
+
   [aria-controls="menu-list"] {
     display: block;
-    margin-bottom: 10px;
+    margin: 10px;
   }
 
   .menu ul {
@@ -176,10 +178,11 @@ img {
     transition: all 0.5s;
   }
 
+  /* ~ = future sibling selector */ 
   [aria-expanded="true"] ~ ul {
     display: grid;
     max-height: 500px;
-    transform: rotateX(0);
+    transform: rotate(0);
   }
 
   [aria-expanded="false"] .close {
@@ -193,26 +196,21 @@ img {
   [aria-expanded="true"] .open {
     display: none;
   }
-
 }
 
 @media (max-width: 700px) {
   .top {
-    grid-template-areas:
-      "hero hero"
-      "cta1 cta2"
-  }
-  /* About */
-  .about {
-    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "hero hero"
+    "cta1 cta2";
   }
 }
 
 @media (max-width: 500px) {
   .top {
-    grid-template-areas:
-      "hero"
-      "cta1"
-      "cta2"
+    grid-template-areas: 
+    "hero"
+    "cta1" 
+    "cta2";
   }
 }
