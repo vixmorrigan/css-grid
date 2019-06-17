@@ -101,11 +101,13 @@ img {
 /* Features Segment */
 .features {
   display: grid;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
 .feature {
   background: white;
+  color: var(--purple);
   padding: 10px;
   border: 1px solid white;
   text-align: center;
@@ -117,7 +119,7 @@ img {
 }
 
 .feature p {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .about {
@@ -203,6 +205,10 @@ img {
     grid-template-areas: 
     "hero hero"
     "cta1 cta2";
+  }
+
+  .about {
+    grid-template-columns: 1fr;
   }
 }
 
